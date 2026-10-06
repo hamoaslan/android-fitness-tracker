@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/counter_card"
+        android:layout_marginTop="8dp"
+        tools:ignore="ExtraText">
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <!-- Zurück-Button -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_arrow_back"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Zurück"
+                android:layout_marginEnd="8dp"
+                app:tint="@android:color/black" />
+
+            <!-- Timer -->
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:textColor="#212121"
+                android:background="@drawable/timer_background"
+                android:gravity="center"/>
+
+            <!-- Profilwechsel-Button -->
+            <ImageButton
+                android:id="@+id/btnSwitchProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_profile_switch"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Profil wechseln"
+                android:layout_marginStart="8dp"
+                app:tint="@android:color/black" />
+        </LinearLayout>
+
+
+        <!-- Debug beenden -->
+        <Button
+            android:id="@+id/btnExitDebug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debug-Modus beenden"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: Wartend"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="#00796B"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <!-- Zähler -->
+        <TextView
+            android:id="@+id/counterPushup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liegestütze: 0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/counterSquat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kniebeugen: 0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/counterPullup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Klimmzüge: 0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <!-- Start Button -->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workout starten"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btn_multiplayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiplayer starten"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#0000FF"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"/>
+
+        <!-- Debug-Knopf: Tasche -->
+        <Button
+            android:id="@+id/togglePocketButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tasche: an/aus (Debug)"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+
+        <!-- Debug: Sensorwinkel -->
+        <TextView
+            android:id="@+id/angleXText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X: --"
+            android:visibility="gone" />
+
+    <TextView
+            android:id="@+id/angleYText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y: --"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/angleZText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z: --"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/angleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Winkel: --"
+            android:visibility="gone" />
+
+        <!-- DEBUG: Übungsauswahl -->
+        <TextView
+            android:id="@+id/debugExerciseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Debug: Aktuelle Übung"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/debugExerciseButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnDebugPushup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pushup" />
+            <Button
+                android:id="@+id/btnDebugSquat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Squat" />
+            <Button
+                android:id="@+id/btnDebugPullup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pullup" />
+        </LinearLayout>
+        <!-- DEBUG: Schwellenwerte Pushup -->
+        <TextView
+            android:id="@+id/thresholdPushupLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Push-up Δz: 0.80"
+            android:visibility="gone" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btnPushupDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="–" />
+            <Button
+                android:id="@+id/btnPushupUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+        </LinearLayout>
+
+        <!-- DEBUG: Schwellenwerte Squat -->
+        <TextView
+            android:id="@+id/thresholdSquatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Squat Δz: 0.80"
+            android:visibility="gone" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btnSquatDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="–" />
+            <Button
+                android:id="@+id/btnSquatUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+        </LinearLayout>
+
+        <!-- DEBUG: Schwellenwerte Pullup -->
+        <TextView
+            android:id="@+id/thresholdPullupLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pull-up Δz: 0.80"
+            android:visibility="gone" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/btnPullupDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="–" />
+            <Button
+                android:id="@+id/btnPullupUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+        </LinearLayout>
+
+        <!-- DEBUG: Schwellen-Anzeige -->
+        <TextView
+            android:id="@+id/thresholdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Δz-Schwelle: 0.8"
+            android:visibility="gone" />
+
+        <!-- DEBUG: Buttons für allgemeine Schwelle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnLowerThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="– Schwelle" />
+
+            <Button
+                android:id="@+id/btnHigherThreshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Schwelle" />
+        </LinearLayout>
+
+        <!-- DEBUG: Logging speichern -->
+        <Button
+            android:id="@+id/btnSaveLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speichern"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

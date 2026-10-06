@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">FitnessApp</string>
+    <string name="joggen">Joggen</string>
+    <string name="workout">Workout</string>
+    <string name="live">Multyplayer</string>
+    <string name="steps">Schritte</string>
+    <string name="food">Food</string>
+    <string name="scan">Scan</string>
+    <string name="servingSize">Serving Size</string>
+    <string name="calculator">Calculator</string>
+    <string name="calculate">calculate</string>
+    <string name="cancel">Cancel</string>
+    <string name="key_weight">Gewicht</string>
+    <string name="key_height">Größe</string>
+    <string name="key_goal_weight">Zielgewicht</string>
+    <string name="key_age">Alter</string>
+    <string name="save">Save</string>
+    <string name="enter">Enter</string>
+    <string name="foodlist">Food List</string>
+    <string name="hint">Protion Size in g..</string>
+    <string name="key_sex">Sex</string>
+    <string-array name="sex_entries">
+        <item>Man</item>
+        <item>Woman</item>
+        <item>Divers</item>
+        <item>Kampfhelikopter</item>
+        <item>MRCA PA-200 Tornado</item>
+        <item>F35</item>
+        <item>Dora the Explorer</item>
+        <item>Star Destroyer</item>
+        <item>Baguette</item>
+        <item>Dorritos</item>
+        <item>Tie-Fighter</item>
+    </string-array>
+    <string-array name="sex_entries_values">
+        <item>Man</item>
+        <item>Woman</item>
+        <item>Divers</item>
+        <item>Kampfhelikopter</item>
+        <item>MRCA PA-200 Tornado</item>
+        <item>F35</item>
+        <item>Dora the Explorer</item>
+        <item>Star Destroyer</item>
+        <item>Baguette</item>
+        <item>Dorritos</item>
+        <item>Tie-Fighter</item>
+    </string-array>
+    <string name="key_calories">Calories</string>
+    <string name="key_protein">Protein</string>
+    <string name="key_fat">Fat</string>
+    <string name="key_carbohydrates">Carbohydrates</string>
+</resources>

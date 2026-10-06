@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:key="sex" app:title="Personal">
+        <ListPreference app:key="@string/key_sex"
+            app:title="Sex"
+            app:entries="@array/sex_entries"
+            app:entryValues="@array/sex_entries_values"
+            app:defaultValue="Man"
+            app:useSimpleSummaryProvider="true"/>
+        <EditTextPreference app:key="@string/key_weight"
+            app:title="Gewicht"
+            app:defaultValue="80"
+            app:useSimpleSummaryProvider="true"/>
+        <EditTextPreference app:key="@string/key_height"
+            app:title="Größe"
+            app:defaultValue="180"
+            app:useSimpleSummaryProvider="true"/>
+        <EditTextPreference app:key="@string/key_age"
+            app:title="Alter"
+            app:defaultValue="18"
+            app:useSimpleSummaryProvider="true"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:key="Goals" app:title="Goals">
+        <EditTextPreference app:key="@string/key_goal_weight"
+            app:title="Zielgewicht"
+            app:defaultValue="70"
+            app:useSimpleSummaryProvider="true"/>
+        <EditTextPreference app:key="@string/key_calories"
+            app:title="Calories"
+            app:defaultValue="0"
+            app:useSimpleSummaryProvider="true"
+            />
+        <EditTextPreference app:key="@string/key_protein"
+            app:title="Protein"
+            app:defaultValue="0"
+            app:useSimpleSummaryProvider="true"
+            />
+        <EditTextPreference app:key="@string/key_fat"
+            app:title="Fat"
+            app:defaultValue="0"
+            app:useSimpleSummaryProvider="true"
+            />
+        <EditTextPreference app:key="@string/key_carbohydrates"
+            app:title="Carbohydrates"
+            app:defaultValue="0"
+            app:useSimpleSummaryProvider="true"
+            />
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>

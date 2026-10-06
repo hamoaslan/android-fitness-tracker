@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="15dp"
+    >
+
+    <TextView
+        android:id="@+id/gps_title_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/gps_mapview"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:clickable="false"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/gps_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            />
+        <Spinner
+            android:id="@+id/gps_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:spinnerMode="dropdown"
+
+            />
+
+        <EditText
+            android:id="@+id/gps_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter a route name"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="5dp"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/gps_start_tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickStartTracker"
+                android:layout_marginTop="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="Start Tracking!"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/gps_end_tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickEndTracker"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:text="End Tracking!"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="5dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/gps_auto_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickAutoCenter"
+                android:layout_marginTop="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:text="Auto Center : ON"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

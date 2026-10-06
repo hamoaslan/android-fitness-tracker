@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Countdown -->
+        <TextView
+            android:id="@+id/countdownText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⏳ Warte auf Spieler…"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="24dp" />
+
+        <!-- 👤 Spielerboxen horizontal, zentriert -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/playerStatsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:showDividers="middle"
+                android:divider="?android:dividerHorizontal"
+                android:padding="8dp" />
+        </HorizontalScrollView>
+
+        <!-- MQTT-Statusanzeige -->
+        <TextView
+            android:id="@+id/textLiveData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📡 Verbinde mit MQTT…"
+            android:textSize="18sp"
+            android:lineSpacingExtra="6dp"
+            android:gravity="center_horizontal" />
+
+    </LinearLayout>
+</ScrollView>

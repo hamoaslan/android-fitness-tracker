@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/reset"
+        android:title="Reset"
+        app:showAsAction="never"/>
+    <item android:id="@+id/calculator"
+        android:title="Calculator"
+        app:showAsAction="never"/>
+    <item android:id="@+id/food_list"
+        android:title="Food List"
+        app:showAsAction="never"/>
+    <item android:id="@+id/menu_preferences"
+        android:title="Einstellungen"
+        app:showAsAction="never"/>
+</menu>
